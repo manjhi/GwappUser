@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context="com.omninos.gwappuser.activities.ProfileActivity">
+
+    <include android:id="@+id/bar"
+        layout="@layout/profile_appbar"/>
+
+    <RelativeLayout
+        android:id="@+id/imageData"
+        android:layout_below="@id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:src="@drawable/ic_avatar"
+            app:civ_border_width="@dimen/dp_1"
+            app:civ_border_color="@color/colorPrimary"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/imageData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:text="Username"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@drawable/edit_back_ring_shape"
+            android:hint="Upkar Singh"
+            android:paddingStart="@dimen/dp_20"
+            android:inputType="textCapWords"
+            android:padding="@dimen/dp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:text="Email"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@drawable/edit_back_ring_shape"
+            android:hint="info@omninos.com"
+            android:paddingStart="@dimen/dp_20"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/dp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Phone Number"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:paddingStart="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@drawable/edit_back_ring_shape"
+            android:hint="+919595959595"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:inputType="textPassword"
+            android:padding="@dimen/dp_12" />
+
+
+    </LinearLayout>
+</RelativeLayout>

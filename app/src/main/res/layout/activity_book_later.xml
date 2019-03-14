@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".activities.BookLaterActivity">
+
+
+    <include android:id="@+id/bar"
+        layout="@layout/profile_appbar"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@id/bar"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </DatePicker>
+
+    <LinearLayout
+        android:layout_below="@id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/sp_20"
+        android:layout_marginEnd="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_height="45dp">
+        <TextView
+            android:id="@+id/pickTime"
+            android:text="Time"
+            android:textAlignment="center"
+            android:background="@drawable/reject_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bookButton"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Book"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/accept_button"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

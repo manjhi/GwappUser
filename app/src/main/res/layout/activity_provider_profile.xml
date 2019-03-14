@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context="com.omninos.gwappuser.activities.ProviderProfileActivity">
+
+    <include android:id="@+id/action_bar"
+        layout="@layout/profile_appbar"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/action_bar"
+        android:id="@+id/image"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:src="@drawable/image_user"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Andy Jack"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/image"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/sp_16"
+        android:layout_marginEnd="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/sec"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quality"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_14"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-51dp"
+                android:layout_marginTop="-17dp"
+                android:layout_marginEnd="-70dp"
+                android:layout_marginBottom="-20dp"
+                android:scaleX="0.4"
+                android:scaleY="0.4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="@dimen/dp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"/>
+            <RatingBar
+                android:scaleY="0.4"
+                android:scaleX="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-17dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginEnd="-70dp"
+                android:layout_marginBottom="-20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/sp_16"
+        android:layout_marginEnd="@dimen/sp_16"
+        android:layout_marginTop="@dimen/sp_10"
+        android:id="@+id/thrd"
+        android:layout_below="@id/sec"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_toEndOf="@id/frst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="@dimen/dp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Response"/>
+            <RatingBar
+                android:scaleY="0.4"
+                android:scaleX="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-17dp"
+                android:layout_marginStart="-68dp"
+                android:layout_marginEnd="-70dp"
+                android:layout_marginBottom="-20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textSize="@dimen/dp_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Finishing"/>
+            <RatingBar
+                android:scaleY="0.4"
+                android:scaleX="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-17dp"
+                android:layout_marginStart="-60dp"
+                android:layout_marginEnd="-70dp"
+                android:layout_marginBottom="-20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:layout_marginTop="@dimen/sp_20"
+        android:layout_below="@id/thrd"
+        android:layout_above="@id/buttons"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:id="@+id/buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/booklater"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Book Later"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/reject_bg"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/book"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Book Now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/button_bg"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

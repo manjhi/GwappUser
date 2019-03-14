@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_120"
+                android:layout_marginTop="@dimen/dp_10"
+                android:src="@drawable/ic_avatar"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/dp_1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dp_4"
+                android:src="@drawable/ic_plus" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_home"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/navi_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_man_user"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/navi_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_chat"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/navi_track"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_gps_route"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Track Technician"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_conversation_mark"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Quotations"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/navi_Payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_payment"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Payment History"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/navi_Terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_terms"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="@string/terms_conditions"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:drawableStart="@drawable/ic_logout"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_4"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:background="#d3d3d3" />
+    </LinearLayout>
+</android.support.design.widget.NavigationView>

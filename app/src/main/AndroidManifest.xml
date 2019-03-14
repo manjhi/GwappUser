@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.omninos.gwappuser">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Utils.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/key" />
+
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activities.OtpVerifyActivity" />
+        <activity android:name=".activities.SingleJobActivity" />
+        <activity android:name=".activities.BidProjectActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.TermsAndConditionActivity" />
+        <activity android:name=".activities.PaymentHistoryActivity" />
+        <activity android:name=".activities.AvailableServicesActivity" />
+        <activity android:name=".activities.ProviderProfileActivity" />
+        <activity android:name=".activities.EstimatePaymentActivity" />
+        <activity android:name=".activities.TrackProviderActivity" />
+        <activity android:name=".activities.PaymentActivity" />
+        <activity android:name=".activities.PaymentPayActivity" />
+        <activity android:name=".activities.PaymentInvoiceActivity" />
+        <activity android:name=".activities.FeedbackActivity" />
+        <activity android:name=".activities.PostProjectActivity" />
+        <activity android:name=".activities.BookLaterActivity" />
+        <activity android:name=".activities.ChatActivity" />
+        <activity android:name=".activities.TotalBidActivity" />
+        <activity android:name=".activities.ProviderResponseActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

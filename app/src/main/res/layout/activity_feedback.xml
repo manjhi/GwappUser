@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context="com.omninos.gwappuser.activities.FeedbackActivity">
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/profile_appbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/sp_20"
+                android:src="@drawable/rating_and_rawes" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="Rate Our Services"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heading"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp_80"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_80"
+                android:text="Over all, how was the help you received from our team?"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_margin="@dimen/dp_8"
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/subHead"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:text="Quality"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="#f72424"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bad"/>
+
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Great"/>
+                </RelativeLayout>
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/sp_20"
+                    app:isb_max="10"
+                    app:isb_only_thumb_draggable="true"
+                    app:isb_progress="2"
+                    app:isb_seek_smoothly="true"
+                    app:isb_show_tick_marks_type="oval"
+                    app:isb_thumb_color="@color/colorPrimary"
+                    app:isb_thumb_size="20dp"
+                    app:isb_tick_marks_drawable="@drawable/round_appcolor"
+                    app:isb_tick_marks_size="16dp"
+                    app:isb_tick_texts_size="@dimen/sp_16"
+                    app:isb_ticks_count="5"
+                    app:isb_track_background_size="4dp"
+                    app:isb_track_progress_color="@color/colorPrimary"
+                    app:isb_track_progress_size="6dp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:text="Price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="#f72424"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bad"/>
+
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Great"/>
+                </RelativeLayout>
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/sp_20"
+                    app:isb_max="10"
+                    app:isb_only_thumb_draggable="true"
+                    app:isb_progress="2"
+                    app:isb_seek_smoothly="true"
+                    app:isb_show_tick_marks_type="oval"
+                    app:isb_thumb_color="@color/colorPrimary"
+                    app:isb_thumb_size="20dp"
+                    app:isb_tick_marks_drawable="@drawable/round_appcolor"
+                    app:isb_tick_marks_size="16dp"
+                    app:isb_tick_texts_size="@dimen/sp_16"
+                    app:isb_ticks_count="5"
+                    app:isb_track_background_size="4dp"
+                    app:isb_track_progress_color="@color/colorPrimary"
+                    app:isb_track_progress_size="6dp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:text="Response"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="#f72424"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bad"/>
+
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Great"/>
+                </RelativeLayout>
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/sp_20"
+                    app:isb_max="10"
+                    app:isb_only_thumb_draggable="true"
+                    app:isb_progress="2"
+                    app:isb_seek_smoothly="true"
+                    app:isb_show_tick_marks_type="oval"
+                    app:isb_thumb_color="@color/colorPrimary"
+                    app:isb_thumb_size="20dp"
+                    app:isb_tick_marks_drawable="@drawable/round_appcolor"
+                    app:isb_tick_marks_size="16dp"
+                    app:isb_tick_texts_size="@dimen/sp_16"
+                    app:isb_ticks_count="5"
+                    app:isb_track_background_size="4dp"
+                    app:isb_track_progress_color="@color/colorPrimary"
+                    app:isb_track_progress_size="6dp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:text="Finishing"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="#f72424"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bad"/>
+
+                    <TextView
+                        android:textSize="@dimen/sp_16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Great"/>
+                </RelativeLayout>
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp_20"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/sp_20"
+                    app:isb_max="10"
+                    app:isb_only_thumb_draggable="true"
+                    app:isb_progress="2"
+                    app:isb_seek_smoothly="true"
+                    app:isb_show_tick_marks_type="oval"
+                    app:isb_thumb_color="@color/colorPrimary"
+                    app:isb_thumb_size="20dp"
+                    app:isb_tick_marks_drawable="@drawable/round_appcolor"
+                    app:isb_tick_marks_size="16dp"
+                    app:isb_tick_texts_size="@dimen/sp_16"
+                    app:isb_ticks_count="5"
+                    app:isb_track_background_size="4dp"
+                    app:isb_track_progress_color="@color/colorPrimary"
+                    app:isb_track_progress_size="6dp" />
+
+
+                <EditText
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Comment(optional)"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@drawable/bid_et_bg"
+                    android:gravity="top"
+                    android:padding="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/proceed"
+                    android:layout_marginBottom="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg"
+                    android:layout_width="wrap_content"
+                    android:paddingEnd="@dimen/dp_60"
+                    android:paddingStart="@dimen/dp_60"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

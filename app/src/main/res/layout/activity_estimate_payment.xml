@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context="com.omninos.gwappuser.activities.EstimatePaymentActivity">
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/profile_appbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/locationCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardElevation="@dimen/dp_2"
+                app:cardUseCompatPadding="true">
+                <EditText
+                    android:id="@+id/et_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:background="@null"
+                    android:hint="Enter Your Location"
+                    android:padding="@dimen/dp_2" />
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/mapData"
+                android:background="@drawable/bid_et_bg"
+                android:layout_below="@id/locationCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_margin="@dimen/dp_20">
+            <fragment
+                android:layout_margin="@dimen/dp_2"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/mapData"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    android:text="Pick a Date"/>
+
+                <EditText
+                    android:id="@+id/pickDate"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bid_et_bg"
+                    android:hint="30/01/2019"/>
+
+                <TextView
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Pick a Service Time"/>
+
+                <EditText
+                    android:id="@+id/serviceTime"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bid_et_bg"
+                    android:hint="12:00 PM"/>
+
+                <TextView
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Enter Complete Address"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/bid_et_bg"
+                    android:gravity="top"
+                    android:padding="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Perimeter of Area"/>
+
+                <EditText
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bid_et_bg"/>
+
+                <TextView
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Additional Comments"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/bid_et_bg"
+                    android:gravity="top"
+                    android:padding="@dimen/dp_10"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/proceed"
+                    android:layout_marginBottom="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg"
+                    android:layout_width="wrap_content"
+                    android:paddingEnd="@dimen/dp_60"
+                    android:textColor="@color/white"
+                    android:paddingStart="@dimen/dp_60"
+                    android:layout_height="wrap_content"
+                    android:text="Proceed"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

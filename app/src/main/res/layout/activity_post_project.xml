@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context="com.omninos.gwappuser.activities.PostProjectActivity">
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/app_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a name for your project"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bid_et_bg"
+                android:hint="e.g. Build me a project"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="Tell us more about your project"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="Start with a bit about yourself or your business, and include an overview of what you need done." />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@drawable/bid_et_bg"
+                android:gravity="top"
+                android:hint="Describe your project here..."
+                android:padding="@dimen/dp_10"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bid_et_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@drawable/bid_et_bg"
+                    android:drawableStart="@drawable/ic_add"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_10"
+                    android:text="Upload Files" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/upload"
+                    android:textSize="@dimen/dp_10"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:text="Drag and drop any image or document that might be helpful in explaining your project brief here" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="What skill are required?"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_marginEnd="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="we've detected the following skill to suit your project.Feel free to modify these choices to best your needs." />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bid_et_bg"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10" />
+
+            <Button
+                android:id="@+id/proceed"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:background="@drawable/button_bg"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/dp_60"
+                android:paddingStart="@dimen/dp_60"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
